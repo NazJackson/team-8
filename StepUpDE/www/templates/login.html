@@ -1,5 +1,10 @@
 <ion-view title="Login" hide-back-button="true" id="page9" ng-controller="loginCtrl">
+
     <ion-content padding="true" class="has-header">
+      <a ui-sref="#" class="item item-thumbnail-left">
+        <img src="/img/UnitedWay.png"/>
+        <h1 style="color:#8C001A;font-weight:bolder;font-size:45px;font-family:cursive">StepUPDE!</h1>
+      </a>
         <form id="login-form2" class="list">
             <button id="login-button5" class="button button-positive  button-block icon-left ion-social-facebook">Facebook Login</button>
             <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
@@ -19,5 +24,9 @@
             <a ui-sref="stepUpDE.donations" id="login-button3" style="border-radius:50px 50px 50px 50px;" class="button button-royal  button-block">Donate Now!</a>
             <ion-toggle toggle-class="toggle-light" id="login-toggle1">Espanol?</ion-toggle>
         </form>
+        <a ui-sref="stepUpDE.reward" class="item item-thumbnail-left" style="height: 25px;">
+          <img src="/img/UnitedWay.png" style="height: 25px; width: 30px"/>
+          <h2>United Way</h2>
+        </a>
     </ion-content>
 </ion-view>
