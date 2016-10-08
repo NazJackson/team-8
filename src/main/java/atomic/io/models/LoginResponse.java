@@ -15,6 +15,7 @@ public class LoginResponse {
     private Long id;
     private String username;
     private String password;
+    private String zipCode;
 
     public Long getId() {
         return id;
@@ -38,5 +39,13 @@ public class LoginResponse {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 }

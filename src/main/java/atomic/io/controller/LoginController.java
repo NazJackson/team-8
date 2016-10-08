@@ -22,8 +22,8 @@ public class LoginController {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-    @RequestMapping(value = "/Login", method = RequestMethod.POST)
-    public ResponseEntity<LoginResponse> requestDataPost(@RequestBody LoginRequest loginRequest){
+    @RequestMapping(value = "/volunteerTabPage", method = RequestMethod.POST)
+    public ResponseEntity<LoginResponse> requestDataPost(@RequestBody LoginRequest loginRequest) {
         LoginResponse loginResponse = new LoginResponse();
         loginResponseRepository.save(loginResponse);
         return new ResponseEntity<>(loginResponse, HttpStatus.CREATED);
