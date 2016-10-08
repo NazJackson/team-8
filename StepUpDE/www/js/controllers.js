@@ -8,11 +8,16 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('volunteeringCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('volunteeringCtrl', ['$scope', '$http', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-
+function ($scope, $http) {
+$scope.organizations = [];
+$http.get('/organizations.json')
+.then(function (response){
+  console.log(response);
+  $scope.organizations = response.data;
+})
 
 }])
 

@@ -1,0 +1,22 @@
+[
+ {
+   "zipcode":"19801",
+   "nameOfOrg": "Zip Code Wilmington",
+   "short_description":"A 3 Month program that teaches you the basis of Software Development"
+ },
+ {
+   "zipcode":"19805",
+   "nameOfOrg":"Delaware Humane Society",
+   "short_description":"blah blah bblah PETS SHIT"
+ },
+ {
+   "zipcode":"19803",
+   "nameOfOrg":"SPCA",
+   "short_description":"blah more boring pet shit"
+ },
+ {
+   "zipcode":"1905",
+   "nameOfOrg":"Domestic Faternal societies and associations",
+   "short_description": "Some bullshit ass non-profit organization"
+ }
+]
