@@ -1,4 +1,4 @@
-angular.module('app.routes', [])
+angular.module('app.routes', ['ionicUIRouter'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -56,10 +56,27 @@ angular.module('app.routes', [])
     }
   })
 
+  /* 
+    The IonicUIRouter.js UI-Router Modification is being used for this route.
+    To navigate to this route, do NOT use a URL. Instead use one of the following:
+      1) Using the ui-sref HTML attribute:
+        ui-sref='stepUpDE.home'
+      2) Using $state.go programatically:
+        $state.go('stepUpDE.home');
+    This allows your app to figure out which Tab to open this page in on the fly.
+    If you're setting a Tabs default page or modifying the .otherwise for your app and
+    must use a URL, use one of the following:
+      /page1/tab1/home
+      /page1/tab4/home
+  */
   .state('stepUpDE.home', {
     url: '/home',
     views: {
       'tab1': {
+        templateUrl: 'templates/home.html',
+        controller: 'homeCtrl'
+      },
+      'tab4': {
         templateUrl: 'templates/home.html',
         controller: 'homeCtrl'
       }
@@ -110,10 +127,20 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('organizations', {
-    url: '/oraganizations',
-    templateUrl: 'templates/organizations.html',
-    controller: 'organizationsCtrl'
+  .state('stepUpDE.thankYou', {
+    url: '/thankyou',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/thankYou.html',
+        controller: 'thankYouCtrl'
+      }
+    }
+  })
+
+  .state('activeEvents', {
+    url: '/events',
+    templateUrl: 'templates/activeEvents.html',
+    controller: 'activeEventsCtrl'
   })
 
 $urlRouterProvider.otherwise('/login')
