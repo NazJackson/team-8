@@ -10,32 +10,32 @@ angular.module('app.routes', [])
     
   
 
-      .state('stepUpDE.donationTabPage', {
-    url: '/page2',
+      .state('stepUpDE.donations', {
+    url: '/donate',
     views: {
       'tab4': {
-        templateUrl: 'templates/donationTabPage.html',
-        controller: 'donationTabPageCtrl'
+        templateUrl: 'templates/donations.html',
+        controller: 'donationsCtrl'
       }
     }
   })
 
-  .state('stepUpDE.volunteerTabPage', {
-    url: '/page3',
+  .state('stepUpDE.volunteering', {
+    url: '/volunteer',
     views: {
       'tab3': {
-        templateUrl: 'templates/volunteerTabPage.html',
-        controller: 'volunteerTabPageCtrl'
+        templateUrl: 'templates/volunteering.html',
+        controller: 'volunteeringCtrl'
       }
     }
   })
 
-  .state('stepUpDE.networkTabPage', {
-    url: '/page4',
+  .state('stepUpDE.socialFeed', {
+    url: '/social',
     views: {
       'tab5': {
-        templateUrl: 'templates/networkTabPage.html',
-        controller: 'networkTabPageCtrl'
+        templateUrl: 'templates/socialFeed.html',
+        controller: 'socialFeedCtrl'
       }
     }
   })
@@ -46,27 +46,69 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-  .state('stepUpDE.rewardTabPage', {
-    url: '/page5',
+  .state('stepUpDE.reward', {
+    url: '/rewards',
     views: {
       'tab6': {
-        templateUrl: 'templates/rewardTabPage.html',
-        controller: 'rewardTabPageCtrl'
+        templateUrl: 'templates/reward.html',
+        controller: 'rewardCtrl'
       }
     }
   })
 
-  .state('stepUpDE.homeTabPage', {
-    url: '/page7',
+  .state('stepUpDE.home', {
+    url: '/home',
     views: {
       'tab1': {
-        templateUrl: 'templates/homeTabPage.html',
-        controller: 'homeTabPageCtrl'
+        templateUrl: 'templates/home.html',
+        controller: 'homeCtrl'
       }
     }
   })
 
-$urlRouterProvider.otherwise('/page1/page5')
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+
+  .state('signUp', {
+    url: '/signup',
+    templateUrl: 'templates/signUp.html',
+    controller: 'signUpCtrl'
+  })
+
+  .state('settings', {
+    url: '/settings',
+    templateUrl: 'templates/settings.html',
+    controller: 'settingsCtrl'
+  })
+
+  .state('volunteerPreferences', {
+    url: '/volunteer-preferences',
+    templateUrl: 'templates/volunteerPreferences.html',
+    controller: 'volunteerPreferencesCtrl'
+  })
+
+  .state('badges', {
+    url: '/badges',
+    templateUrl: 'templates/badges.html',
+    controller: 'badgesCtrl'
+  })
+
+  .state('rewardStore', {
+    url: '/store',
+    templateUrl: 'templates/rewardStore.html',
+    controller: 'rewardStoreCtrl'
+  })
+
+  .state('organizations', {
+    url: '/oraganizations',
+    templateUrl: 'templates/organizations.html',
+    controller: 'organizationsCtrl'
+  })
+
+$urlRouterProvider.otherwise('/login')
 
   
 
