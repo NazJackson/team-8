@@ -90,16 +90,24 @@ angular.module('app.routes', [])
     controller: 'volunteerPreferencesCtrl'
   })
 
-  .state('badges', {
+  .state('stepUpDE.badges', {
     url: '/badges',
-    templateUrl: 'templates/badges.html',
-    controller: 'badgesCtrl'
+    views: {
+      'tab6': {
+        templateUrl: 'templates/badges.html',
+        controller: 'badgesCtrl'
+      }
+    }
   })
 
-  .state('rewardStore', {
+  .state('stepUpDE.rewardStore', {
     url: '/store',
-    templateUrl: 'templates/rewardStore.html',
-    controller: 'rewardStoreCtrl'
+    views: {
+      'tab6': {
+        templateUrl: 'templates/rewardStore.html',
+        controller: 'rewardStoreCtrl'
+      }
+    }
   })
 
   .state('organizations', {
